@@ -1,26 +1,14 @@
-import { Meta } from '../types'
+import { createRoute } from 'honox/factory'
 
-export default function Top() {
-  const posts = import.meta.glob<{ frontmatter: Meta }>('./posts/*.mdx', {
-    eager: true,
-  })
-
-  return (
+export default createRoute((c) => {
+  return c.render(
     <div>
-      <h2>Posts</h2>
-      <ul class="article-list">
-        {Object.entries(posts).map(([id, module]) => {
-          if (module.frontmatter) {
-            return (
-              <li>
-                <a href={`${id.replace(/\.mdx$/, '')}`}>
-                  {module.frontmatter.title}
-                </a>
-              </li>
-            )
-          }
-        })}
+      <h1>Hello👋</h1>
+      <ul>
+        <li>
+          <a href="/posts">Posts</a>
+        </li>
       </ul>
     </div>
   )
-}
+})
