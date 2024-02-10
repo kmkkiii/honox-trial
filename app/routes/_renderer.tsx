@@ -35,6 +35,10 @@ export default jsxRenderer(({ children, title }) => {
         <title>{title}</title>
         <Script src="/app/client.ts" />
         <Style />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css"
+        ></link>
       </head>
       <body class={bodyClass}>
         <div class={containerClass}>
