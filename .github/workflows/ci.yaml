@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  # Reference: https://zenn.dev/watany/articles/e21a54cf3d56d8
+  bunLockCheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - name: check lock diff
+        run: diff <(bun bun.lockb) yarn.lock
