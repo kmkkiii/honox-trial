@@ -5,15 +5,17 @@ import Header from '../components/header'
 
 const bodyClass = css`
   background-color: rgb(229 231 235);
+  padding: 0;
+  margin: 0;
 `
 
 const containerClass = css`
+  height: 100vh;
   max-width: 760px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  background-color: white;
 
   padding-left: 1rem;
   padding-right: 1rem;
