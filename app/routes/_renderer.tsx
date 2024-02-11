@@ -1,6 +1,7 @@
 import { jsxRenderer } from 'hono/jsx-renderer'
 import { Script } from 'honox/server'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 export default jsxRenderer(({ children, title }) => {
   return (
@@ -21,10 +22,11 @@ export default jsxRenderer(({ children, title }) => {
         ></link>
       </head>
       <body class="bg-slate-300">
+        <Header />
         <div class="bg-white max-w-screen-md h-full m-auto px-8">
-          <Header />
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   )
