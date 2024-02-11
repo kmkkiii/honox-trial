@@ -6,9 +6,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
-import devServer from '@hono/vite-dev-server'
-
-const entry = './app/server.ts'
+import pages from '@hono/vite-cloudflare-pages'
 
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
@@ -26,13 +24,13 @@ export default defineConfig(({ mode }) => {
     return {
       plugins: [
         honox(),
-        // devServer({ entry }),
-        // ssg({ entry }),
+        ssg({ entry: './app/server.ts' }),
         mdx({
           jsxImportSource: 'hono/jsx',
           remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
           rehypePlugins: [rehypeHighlight],
         }),
+        pages(),
       ],
     }
   }
