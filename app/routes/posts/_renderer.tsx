@@ -9,7 +9,7 @@ export default jsxRenderer(({ children, title }) => {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content={`${title}`} />
-        <meta property="og:site_name" content="kmkkiii&#39;s blog" />
+        <meta property="og:site_name" content="honox sample blog" />
         <meta property="og:locale" content="ja_JP" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@kmkkiii" />
