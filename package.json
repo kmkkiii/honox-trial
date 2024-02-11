@@ -17,6 +17,7 @@
     "@hono/vite-cloudflare-pages": "^0.2.4",
     "@hono/vite-ssg": "^0.0.1",
     "@mdx-js/rollup": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "rehype-highlight": "^7.0.0",
