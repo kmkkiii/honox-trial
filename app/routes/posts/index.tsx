@@ -10,12 +10,12 @@ export default createRoute((c) => {
     <div>
       <h2>Posts</h2>
       <p>Here are some posts:</p>
-      <ul>
+      <ul class="list-disc">
         {Object.entries(posts).map(([id, module]) => {
           if (module.frontmatter) {
             return (
               <li>
-                <a href={`posts/${id.replace(/\.mdx$/, '')}`}>
+                <a href={`posts/${id.replace(/\.mdx$/, '')}`} class="underline">
                   {module.frontmatter.title}
                 </a>
               </li>

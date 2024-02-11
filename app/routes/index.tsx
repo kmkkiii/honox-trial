@@ -3,10 +3,12 @@ import { createRoute } from 'honox/factory'
 export default createRoute((c) => {
   return c.render(
     <div>
-      <h1>Hello👋</h1>
-      <ul>
+      <h2 class="h2">Hello👋</h2>
+      <ul class="list-disc">
         <li>
-          <a href="/posts">Posts</a>
+          <a href="/posts" class="underline">
+            Posts
+          </a>
         </li>
       </ul>
     </div>
